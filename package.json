@@ -3,13 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "serve -s dist",
+    "heroku-postbuild": "yarn build",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "vue": "^2.5.17",
-    "vue2-google-maps": "^0.10.2"
+    "vue2-google-maps": "^0.10.2",
+    "serve": "^9.6.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.1",
