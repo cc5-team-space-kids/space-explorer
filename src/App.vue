@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <img v-bind:src="imgUrl" />
+  <div id="app" :style="{ backgroundImage: `url('${imgUrl}')` }">
     <Map msg="Welcome to Space Explorer"/>
     <Description />
   </div>
@@ -18,20 +17,11 @@ export default {
   },
   data () {
     return {
-      imgUrl: {}
+      imgUrl: this.$store.state.imgUrl
     }
   },
-  mounted() {
-    const RapidAPI = require('rapidapi-connect');
-    const rapid = new RapidAPI(process.env.VUE_APP_RAKUTEN_PKG, process.env.VUE_APP_RAKUTEN_PROJ);
-
-    rapid.call('NasaAPI', 'getPictureOfTheDay', { 
-    }).on('success', (result)=>{
-      console.log(result);
-      this.imgUrl = result.url;
-    }).on('error', (err)=>{
-      console.log(err);
-    });
+  computed: {
+    getimgUrl: function() {return this.$store.dispatch("SET_BACKGROUND_URL")}
   },
 }
 </script>
@@ -43,6 +33,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

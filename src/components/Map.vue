@@ -6,11 +6,10 @@
       <div>
         <button v-on:click="addMessage">button</button>
       </div>
-      <GmapMap
+      <GmapMap class="map"
         :center="{lat:35.6578596, lng:139.7274762}"
         :zoom="16"
         map-type-id="terrain"
-        style="width: 100%; height: 700px"
       >
         <GmapMarker
           :key="index"
@@ -59,5 +58,10 @@ li {
 }
 a {
   color: #42b983;
+}
+.map {
+  width: 70%; 
+  height: 700px; 
+  margin: 0 auto;
 }
 </style>

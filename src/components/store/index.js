@@ -10,7 +10,8 @@ const store = new Vuex.Store({
   mutations,
 
   state: {
-    message: "Hi Kimiko!! You get used to VUEX!! yay!!"
+    message: "Hi Kimiko!! You get used to VUEX!! yay!!",
+    imgUrl: {}
   }
 });
 
