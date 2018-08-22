@@ -3,6 +3,10 @@
     <h1>{{ msg }}</h1>
     <div>
       Hi Tsuyoshi
+      {{message}}
+      <div>
+        <button v-on:click="addMessage">button</button>
+      </div>
       <GmapMap
         :center="{lat:35.6578596, lng:139.7274762}"
         :zoom="16"
@@ -25,9 +29,19 @@
 <script>
 export default {
   name: 'HelloWorld',
+  data () {
+    return {
+      message: this.$store.state.message
+    }
+  },
+  methods: {
+    addMessage () {
+      this.$store.dispatch("ADD_MESSAGE", "You got mail!")
+    }
+  },
   props: {
     msg: String
-  }
+  },
 }
 </script>
 
