@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <div>
+    <img v-bind:src="imgUrl" />
       Hi Tsuyoshi
       {{message}}
       <div>
@@ -40,7 +40,22 @@ export default {
     }
   },
   props: {
-    msg: String
+    msg: String,
+  },
+  data: () => ({
+    imgUrl: {}
+  }),
+  mounted() {
+    const RapidAPI = require('rapidapi-connect');
+    const rapid = new RapidAPI(process.env.VUE_APP_RAKUTEN_PKG, process.env.VUE_APP_RAKUTEN_PROJ);
+
+    rapid.call('NasaAPI', 'getPictureOfTheDay', { 
+    }).on('success', (result)=>{
+      console.log(result);
+      this.imgUrl = result.hdurl;
+    }).on('error', (err)=>{
+      console.log(err);
+    });
   },
 }
 </script>
