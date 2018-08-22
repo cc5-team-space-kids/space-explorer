@@ -31,8 +31,13 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      message: this.$store.state.message,
       imgUrl: {}
+    }
+  },
+  computed: {
+    //update data using the state in store
+    message () {
+      return this.$store.state.message
     }
   },
   methods: {
