@@ -31,7 +31,8 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      message: this.$store.state.message
+      message: this.$store.state.message,
+      imgUrl: {}
     }
   },
   methods: {
@@ -42,9 +43,6 @@ export default {
   props: {
     msg: String,
   },
-  data: () => ({
-    imgUrl: {}
-  }),
   mounted() {
     const RapidAPI = require('rapidapi-connect');
     const rapid = new RapidAPI(process.env.VUE_APP_RAKUTEN_PKG, process.env.VUE_APP_RAKUTEN_PROJ);
