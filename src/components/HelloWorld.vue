@@ -3,21 +3,6 @@
     <h1>{{ msg }}</h1>
     <img v-bind:src="imgUrl" />
       Hi Tsuyoshi
-    <GmapMap
-      :center="{lat:35.6578596, lng:139.7274762}"
-      :zoom="16"
-      map-type-id="terrain"
-      style="width: 100%; height: 700px"
-    >
-      <GmapMarker
-        :key="index"
-        v-for="(m, index) in markers"
-        :position="m.position"
-        :clickable="true"
-        :draggable="true"
-        @click="center=m.position"
-      />
-    </GmapMap>
   </div>
 </template>
 
