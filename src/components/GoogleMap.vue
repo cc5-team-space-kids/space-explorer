@@ -32,12 +32,10 @@ export default {
   name: "GoogleMap",
   data() {
     return {
-      // default to Montreal to keep it simple
-      // change this to whatever makes sense
-      center: { lat: 47.608, lng: -122.335 },
-      markers: [],
-      places: [],
-      currentPlace: null
+      center: this.$store.state.center,
+      markers: this.$store.state.markers,
+      places: this.$store.state.places,
+      currentPlace: this.$store.state.currentPlace,
     };
   },
 
