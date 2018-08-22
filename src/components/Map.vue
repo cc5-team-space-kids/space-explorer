@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <img v-bind:src="imgUrl" />
       Hi Tsuyoshi
       {{message}}
       <div>
@@ -23,17 +22,11 @@
         />
       </GmapMap>
     </div>
-      </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      imgUrl: {}
-    }
-  },
+  name: 'Map',
   computed: {
     //update data using the state in store
     message () {
@@ -47,19 +40,7 @@ export default {
   },
   props: {
     msg: String,
-  },
-  mounted() {
-    const RapidAPI = require('rapidapi-connect');
-    const rapid = new RapidAPI(process.env.VUE_APP_RAKUTEN_PKG, process.env.VUE_APP_RAKUTEN_PROJ);
-
-    rapid.call('NasaAPI', 'getPictureOfTheDay', { 
-    }).on('success', (result)=>{
-      console.log(result);
-      this.imgUrl = result.hdurl;
-    }).on('error', (err)=>{
-      console.log(err);
-    });
-  },
+  }
 }
 </script>
 
