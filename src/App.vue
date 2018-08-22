@@ -15,9 +15,6 @@ export default {
     HelloWorld,
     GoogleMap
   },
-  mounted() {
-    this.$store.dispatch("SET_SATELLITES", 41.702, -76.014);
-  }
 };
 </script>
 

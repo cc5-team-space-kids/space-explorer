@@ -39,8 +39,11 @@ export default {
     };
   },
 
-  mounted() {
-    this.geolocate();
+  async mounted() {
+    const location = await this.geolocate();
+    const loc = this.center;
+    console.log(loc);
+    this.$store.dispatch("SET_SATELLITES", loc);
   },
 
   methods: {

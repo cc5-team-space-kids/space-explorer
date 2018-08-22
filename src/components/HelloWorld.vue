@@ -15,7 +15,7 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      imgUrl: {}
+      imgUrl: this.$store.state.imgUrl 
     };
   },
   computed: {
