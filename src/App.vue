@@ -25,7 +25,10 @@ export default {
   },
 
   computed: {
-    getimgUrl: function() {return this.$store.dispatch("SET_BACKGROUND_URL")}
+    getimgUrl: function() {
+      console.log("Hi I'm computed")
+      return this.$store.dispatch("SET_BACKGROUND_URL")
+    }
   },
 }
 </script>

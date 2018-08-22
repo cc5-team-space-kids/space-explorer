@@ -11,7 +11,7 @@ const store = new Vuex.Store({
 
   state: {
     message: "Hi Kimiko!! You get used to VUEX!! yay!!",
-    imgUrl: {}
+    imgUrl: ""
   }
 });
 
