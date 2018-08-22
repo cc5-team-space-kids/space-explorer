@@ -10,9 +10,10 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "rapidapi-connect": "^0.0.6",
+    "serve": "^9.6.0",
     "vue": "^2.5.17",
-    "vue2-google-maps": "^0.10.2",
-    "serve": "^9.6.0"
+    "vue2-google-maps": "^0.10.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.1",
