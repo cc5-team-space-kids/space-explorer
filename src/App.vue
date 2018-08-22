@@ -20,6 +20,10 @@ export default {
       imgUrl: this.$store.state.imgUrl
     }
   },
+  mounted() {
+    this.$store.dispatch("SET_BACKGROUND_URL")
+  },
+
   computed: {
     getimgUrl: function() {return this.$store.dispatch("SET_BACKGROUND_URL")}
   },
