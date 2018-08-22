@@ -8,42 +8,27 @@
       <div>
         <button v-on:click="addMessage">button</button>
       </div>
-      <GmapMap
-        :center="{lat:35.6578596, lng:139.7274762}"
-        :zoom="16"
-        map-type-id="terrain"
-        style="width: 100%; height: 700px"
-      >
-        <GmapMarker
-          :key="index"
-          v-for="(m, index) in markers"
-          :position="m.position"
-          :clickable="true"
-          :draggable="true"
-          @click="center=m.position"
-        />
-      </GmapMap>
     </div>
       </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
+  name: "HelloWorld",
+  data() {
     return {
       imgUrl: {}
-    }
+    };
   },
   computed: {
     //update data using the state in store
-    message () {
-      return this.$store.state.message
+    message() {
+      return this.$store.state.message;
     }
   },
   methods: {
-    addMessage () {
-      this.$store.dispatch("ADD_MESSAGE", "You got mail!")
+    addMessage() {
+      this.$store.dispatch("ADD_MESSAGE", "You got mail!");
     }
   },
   props: {
