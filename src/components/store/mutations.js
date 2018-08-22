@@ -3,7 +3,6 @@ export const SET_MESSAGE = (state, message) => {
 };
 
 export const SET_SATELLITES = (state, satellites) => {
-  console.log(satellites);
   satellites.above.map((satellite) => {
     return {
       lat: satellite.satlat,
@@ -13,5 +12,4 @@ export const SET_SATELLITES = (state, satellites) => {
   .forEach((satellite) => {
     state.markers.push({ position: satellite });
   });
-  console.log(state.markers);
 };

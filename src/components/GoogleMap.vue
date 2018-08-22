@@ -49,9 +49,6 @@ export default {
 
   async mounted() {
     const location = await this.geolocate();
-    // const loc = this.center;
-    // console.log(loc);
-    // this.$store.dispatch("SET_SATELLITES", loc);
   },
 
   
@@ -63,7 +60,6 @@ export default {
     },
     getSatellites() {
       const loc = this.center;
-      console.log(loc);
       this.$store.dispatch("SET_SATELLITES", loc);
     },
     addMarker() {
