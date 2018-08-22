@@ -3,6 +3,10 @@
     <h1>{{ msg }}</h1>
     <img v-bind:src="imgUrl" />
       Hi Tsuyoshi
+      {{message}}
+      <div>
+        <button v-on:click="addMessage">button</button>
+      </div>
       <GmapMap
         :center="{lat:35.6578596, lng:139.7274762}"
         :zoom="16"
@@ -25,12 +29,25 @@
 <script>
 export default {
   name: 'HelloWorld',
+  data () {
+    return {
+      imgUrl: {}
+    }
+  },
+  computed: {
+    //update data using the state in store
+    message () {
+      return this.$store.state.message
+    }
+  },
+  methods: {
+    addMessage () {
+      this.$store.dispatch("ADD_MESSAGE", "You got mail!")
+    }
+  },
   props: {
     msg: String,
   },
-  data: () => ({
-    imgUrl: {}
-  }),
   mounted() {
     const RapidAPI = require('rapidapi-connect');
     const rapid = new RapidAPI(process.env.VUE_APP_RAKUTEN_PKG, process.env.VUE_APP_RAKUTEN_PROJ);
