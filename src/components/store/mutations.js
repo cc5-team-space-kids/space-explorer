@@ -3,6 +3,7 @@ export const SET_MESSAGE = (state, message) => {
 };
 
 export const SET_SATELLITES = (state, satellites) => {
+  console.log(satellites);
   satellites.above.map((satellite) => {
     return {
       lat: satellite.satlat,

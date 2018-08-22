@@ -39,17 +39,32 @@ export default {
     };
   },
 
+  watch: {
+    center: function (val, oldVal) {
+      if (val !== oldVal) {
+        this.getSatellites();
+      }
+    }
+  },
+
   async mounted() {
     const location = await this.geolocate();
-    const loc = this.center;
-    console.log(loc);
-    this.$store.dispatch("SET_SATELLITES", loc);
+    // const loc = this.center;
+    // console.log(loc);
+    // this.$store.dispatch("SET_SATELLITES", loc);
   },
+
+  
 
   methods: {
     // receives a place object via the autocomplete component
     setPlace(place) {
       this.currentPlace = place;
+    },
+    getSatellites() {
+      const loc = this.center;
+      console.log(loc);
+      this.$store.dispatch("SET_SATELLITES", loc);
     },
     addMarker() {
       if (this.currentPlace) {
