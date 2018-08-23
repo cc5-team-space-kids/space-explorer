@@ -1,5 +1,5 @@
 <template>
-  <div class="description">
+  <div class="description" :style="{ backgroundImage: `url('${this.$store.state.imgUrl}')` }">
     <div class="intro">
       <h1>Space Explorer</h1>
       <p>{{this.$store.state.intro}}</p>
