@@ -11,7 +11,7 @@ Let's play around!!
 ---
 
 ## Features
----
+
 Map - The markers indicate the satellites above the earth plain in real-time  
 Background - The background image changes everyday, complimentary of NASA
 
@@ -20,7 +20,7 @@ Background - The background image changes everyday, complimentary of NASA
 ---
 
 ## Usage
----
+
 you can run `yarn start` to start the application. You will then be able to access it at localhost:8080
 ```
 yarn install // Project setup
@@ -35,7 +35,7 @@ yarn start // start web server
 ---
 
 ## Technical stuff
----
+
 rakuten rapid api  
 Vue / Vuex  
 vue2-google-maps
@@ -44,7 +44,8 @@ vue2-google-maps
 
 ---
 ## Team
-- [@TsubasaK111](https://github.com/TsubasaK111) [![LikedIn](./img/In-2C-21px-r.png)](https://www.linkedin.com/in/tsubasakondo/)
-- [@Akitsuyoshi](https://github.com/Akitsuyoshi) [![LikedIn](./img/In-2C-21px-r.png)](https://www.linkedin.com/in/tsuyoshi-akiyama-ab632a90)
-- [@kimikomotoyama](https://github.com/kimikomotoyama) [![LikedIn](./img/In-2C-21px-r.png)](https://www.linkedin.com/in/kimiko-motoyama-54a198132)
-- [@m0m0i](https://github.com/m0m0i) [![LikedIn](./img/In-2C-21px-r.png)](https://www.linkedin.com/in/hiroyuki-momoi-52270428)
+
+- [@TsubasaK111](https://github.com/TsubasaK111) [![LikedIn](https://github.com/cc5-team-space-kids/space-explorer/img/In-2C-21px-r.png)](https://www.linkedin.com/in/tsubasakondo/)
+- [@Akitsuyoshi](https://github.com/Akitsuyoshi) [![LikedIn](https://github.com/cc5-team-space-kids/space-explorer/img/In-2C-21px-r.png)](https://www.linkedin.com/in/tsuyoshi-akiyama-ab632a90)
+- [@kimikomotoyama](https://github.com/kimikomotoyama) [![LikedIn](https://github.com/cc5-team-space-kids/space-explorer/img/In-2C-21px-r.png)](https://www.linkedin.com/in/kimiko-motoyama-54a198132)
+- [@m0m0i](https://github.com/m0m0i) [![LikedIn](https://github.com/cc5-team-space-kids/space-explorer/img/In-2C-21px-r.png)](https://www.linkedin.com/in/hiroyuki-momoi-52270428)
