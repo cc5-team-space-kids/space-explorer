@@ -1,19 +1,19 @@
 <template>
   <div id="app" :style="{ backgroundImage: `url('${imgUrl}')` }">
-    <Map msg="Welcome to Space Explorer"/>
+    <GoogleMap></GoogleMap>
     <Description />
   </div>
 </template>
 
 <script>
-import Map from './components/Map.vue';
 import Description from './components/Description';
+import GoogleMap from "./components/GoogleMap.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    Map,
-    Description
+    Description,
+    GoogleMap
   },
   data () {
     return {
@@ -47,7 +47,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
