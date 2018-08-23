@@ -21,3 +21,8 @@ export const SET_SATELLITES = (state, satellites) => {
 export const SET_SUN_INFO = (state, sunInfo) => {
   state.sunInfo.push(sunInfo);
 };
+
+export const SET_MOON_INFO = (state, moonInfo) => {
+  console.log(moonInfo);
+  state.moonInfo.push(moonInfo);
+};

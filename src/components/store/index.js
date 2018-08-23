@@ -19,6 +19,7 @@ const store = new Vuex.Store({
     places: [],
     currentPlace: null,
     sunInfo: [],
+    moonInfo: [],
   }
 });
 
