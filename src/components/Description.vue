@@ -1,5 +1,6 @@
 <template>
   <div class="description">
+    <div>{{sunInfo}}</div>
     <div class="intro">{{intro}}</div>
     <div class="features">
       <h2>Features</h2>
@@ -14,15 +15,18 @@
 <script>
   export default {
     name: 'Description',
-    data: () => ({
-      intro: 'This app is for space nerds who is intrigued with the outer space.' +
-      'There are numerous numbers of satllites orbiting the earth. For TVs, weather, GPS, security, and more.' +
-      'This app shows the positions of the satellites in real-time on a map!',
-      texts: [
-        {id: 1, feature: "Map", detail: "The markers indicate the satellites above the earth plain in real-time"},
-        {id: 2, feature: "Background", detail: "The background image changes everyday, complimentary of NASA"}
-      ]
-    })
+    data: function () {
+      return {
+        intro: 'This app is for space nerds who is intrigued with the outer space.' +
+        'There are numerous numbers of satllites orbiting the earth. For TVs, weather, GPS, security, and more.' +
+        'This app shows the positions of the satellites in real-time on a map!',
+        texts: [
+          {id: 1, feature: "Map", detail: "The markers indicate the satellites above the earth plain in real-time"},
+          {id: 2, feature: "Background", detail: "The background image changes everyday, complimentary of NASA"}
+        ],
+        sunInfo: this.$store.state.sunInfo,
+      }
+    },
   }
 </script>
 

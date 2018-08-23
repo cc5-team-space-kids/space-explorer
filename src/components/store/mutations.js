@@ -17,3 +17,7 @@ export const SET_SATELLITES = (state, satellites) => {
     state.markers.push({ position: satellite });
   });
 };
+
+export const SET_SUN_INFO = (state, sunInfo) => {
+  state.sunInfo.push(sunInfo);
+};
