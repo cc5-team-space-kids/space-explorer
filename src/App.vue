@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :style="{ backgroundImage: `url('${this.$store.state.imgUrl}')` }">
+  <div id="app">
     <GoogleMap></GoogleMap>
     <Description />
   </div>

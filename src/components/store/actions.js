@@ -12,7 +12,7 @@ export const SET_BACKGROUND_URL = (store) => {
   rapid.call('NasaAPI', 'getPictureOfTheDay', { 
     'apiKey': process.env.VUE_APP_NAK    
     }).on('success', (result)=>{
-      store.commit("SET_IMG_URL", result.url);
+      store.commit("SET_IMG_URL", result.hdurl);
     }).on('error', (err)=>{
       console.log(err);
     });

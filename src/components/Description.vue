@@ -1,8 +1,8 @@
 <template>
-  <div class="description">
-    <div>{{sunInfo}}</div>
-    <div class="intro">{{intro}}</div>
-    <div class="features">
+  <div class="description" :style="{ backgroundImage: `url('${this.$store.state.imgUrl}')` }">
+    <div class="description-block">{{sunInfo}}</div>
+    <div class="description-block intro">{{intro}}</div>
+    <div class="description-block features">
       <h2>Features</h2>
       <div class="text" v-for="text in texts" v-bind:key="text.id">
         <h4>{{text.feature}}</h4>
@@ -32,10 +32,15 @@
 
 <style scoped>
   .description {
-    padding: 10px;
+    padding: 35px 5px;
     background-color: white;
     text-align: left;
-    margin-top: 100px;
+    height: 800px;
+  }
+
+  .description-block {
+    background-color: gray;
+    color: white;
   }
 
   .intro {
