@@ -1,3 +1,6 @@
+import { resolve } from 'path';
+import { rejects } from 'assert';
+
 export const ADD_MESSAGE = (store, message) => {
   store.commit("SET_MESSAGE", message)
 }
@@ -19,7 +22,6 @@ export const SET_BACKGROUND_URL = (store) => {
 }
  
 export const SET_SATELLITES = async (store, loc) => {
-  // TODO: async calls to https://www.n2yo.com/rest/v1/satellite/above/41.702/-76.014/0/70/18/&apiKey=
   const url = `https://www.n2yo.com/rest/v1/satellite/above/${loc.lat}/${loc.lng}/100/30/0/&apiKey=${process.env.VUE_APP_SATELITE_API}`
   const satellites = await fetch(url)
     .then((data) => {
@@ -31,4 +33,28 @@ export const SET_SATELLITES = async (store, loc) => {
     .catch((e) => console.log(e));
 
   store.commit("SET_SATELLITES", satellites);
+};
+
+export const SET_SUN_INFO = async (store, loc) => {
+  const d = new Date();
+  const lat = loc.lat; 
+  const lng = loc.lng; 
+  const date = d.getUTCFullYear() + "-" + (d.getUTCMonth() + 1) + "-" + d.getUTCDay();
+
+  const url = `https://sun.p.mashape.com/api/sun/?latitude=${lat}&longitude=${lng}&date=${date}`;
+
+  const unirest = require('unirest');
+
+  const info = await new Promise((resolve) => {
+    unirest.get(url)
+      .header("X-Mashape-Key", "OHJHR7IfeCmshao1sHNDuj8PtDi1p1fNjd1jsnXbs3LPozz5rN")
+      .header("X-Mashape-Host", "sun.p.mashape.com")
+      .end((res) => {
+        if (res) {
+          resolve(res.body);
+        }
+      });
+  }) 
+
+  store.commit("SET_SUN_INFO", info);
 };
