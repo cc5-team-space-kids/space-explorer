@@ -9,6 +9,10 @@ export const ADD_MESSAGE = (store, message) => {
   store.commit("SET_MESSAGE", message)
 }
 
+export const SET_CENTER = (store, newPosition) => {
+  store.commit("SET_CENTER", newPosition);
+};
+
 export const SET_BACKGROUND_URL = (store) => {
   const RapidAPI = require('rapidapi-connect');
   const rapid = new RapidAPI(process.env.VUE_APP_RAKUTEN_PKG, process.env.VUE_APP_RAKUTEN_PROJ);
@@ -27,9 +31,6 @@ export const SET_SATELLITES = async (store, loc) => {
   const satellites = await fetch(url)
     .then((data) => {
       return data.json();
-    })
-    .then((json) => {
-      return json;
     })
     .catch((e) => console.log(e));
 
