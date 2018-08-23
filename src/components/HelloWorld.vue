@@ -2,14 +2,12 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <img v-bind:src="imgUrl" />
-      Hi Tsuyoshi
-
-      {{message}}
-      <div>
-        <button v-on:click="addMessage">button</button>
-      </div>
+    Hi Tsuyoshi
+    {{message}}
+    <div>
+      <button v-on:click="addMessage">button</button>
     </div>
-      </div>
+  </div>
 </template>
 
 <script>
@@ -17,7 +15,7 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      imgUrl: {}
+      imgUrl: this.$store.state.imgUrl 
     };
   },
   computed: {
