@@ -1,5 +1,6 @@
-export const SET_MESSAGE = (state, message) => {
-  state.message = message
+export const SET_CENTER = (state, newCenter) => {
+  console.log(newCenter);
+  state.center = newCenter;
 }
 
 export const SET_IMG_URL = (state, url) => {
@@ -11,6 +12,7 @@ export const SET_SATELLITES = (state, satellites) => {
     return {
       lat: satellite.satlat,
       lng: satellite.satlng,
+      name: satellite.satname,
     };
   })
   .forEach((satellite) => {
@@ -20,4 +22,9 @@ export const SET_SATELLITES = (state, satellites) => {
 
 export const SET_SUN_INFO = (state, sunInfo) => {
   state.sunInfo.push(sunInfo);
+};
+
+export const SET_MOON_INFO = (state, moonInfo) => {
+  console.log(moonInfo);
+  state.moonInfo.push(moonInfo);
 };

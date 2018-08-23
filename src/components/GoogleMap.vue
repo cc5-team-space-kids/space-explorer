@@ -23,7 +23,7 @@
         v-for="(m, index) in markers"
         :position="m.position"
         icon="./sat_icon_m.png"
-        @click="center=m.position"
+        @click="$store.commit('SET_CENTER', m.position)"
       ></gmap-marker>
     </gmap-map>
   </div>
@@ -52,6 +52,7 @@ export default {
 
   async mounted() {
     const location = await this.geolocate();
+    this.getMoonInfo();
   },
 
   
@@ -68,6 +69,9 @@ export default {
     getSunInfo() {
       const loc = this.center;
       this.$store.dispatch("SET_SUN_INFO", loc);
+    },
+    getMoonInfo() {
+      this.$store.dispatch("SET_MOON_INFO");
     },
     addMarker() {
       if (this.currentPlace) {

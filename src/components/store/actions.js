@@ -1,9 +1,17 @@
-import { resolve } from 'path';
-import { rejects } from 'assert';
+import {
+  resolve
+} from 'path';
+import {
+  rejects
+} from 'assert';
 
 export const ADD_MESSAGE = (store, message) => {
   store.commit("SET_MESSAGE", message)
 }
+
+export const SET_CENTER = (store, newPosition) => {
+  store.commit("SET_CENTER", newPosition);
+};
 
 export const SET_BACKGROUND_URL = (store) => {
   const RapidAPI = require('rapidapi-connect');
@@ -24,9 +32,6 @@ export const SET_SATELLITES = async (store, loc) => {
     .then((data) => {
       return data.json();
     })
-    .then((json) => {
-      return json;
-    })
     .catch((e) => console.log(e));
 
   store.commit("SET_SATELLITES", satellites);
@@ -34,8 +39,8 @@ export const SET_SATELLITES = async (store, loc) => {
 
 export const SET_SUN_INFO = async (store, loc) => {
   const d = new Date();
-  const lat = loc.lat; 
-  const lng = loc.lng; 
+  const lat = loc.lat;
+  const lng = loc.lng;
   const date = d.getUTCFullYear() + "-" + (d.getUTCMonth() + 1) + "-" + d.getUTCDay();
 
   const url = `https://sun.p.mashape.com/api/sun/?latitude=${lat}&longitude=${lng}&date=${date}`;
@@ -51,7 +56,24 @@ export const SET_SUN_INFO = async (store, loc) => {
           resolve(res.body);
         }
       });
-  }) 
+  })
 
   store.commit("SET_SUN_INFO", info);
+};
+
+export const SET_MOON_INFO = async (store) => {
+  const unirest = require('unirest');
+
+  const info = await new Promise((resolve) => {
+    unirest.get("https://burningsoul-moon-v1.p.mashape.com/")
+      .header("X-Mashape-Key", "OHJHR7IfeCmshao1sHNDuj8PtDi1p1fNjd1jsnXbs3LPozz5rN")
+      .header("X-Mashape-Host", "burningsoul-moon-v1.p.mashape.com")
+      .end((res) => {
+        if (res) {
+          resolve(res.body);
+        }
+      });
+  })
+
+  store.commit("SET_MOON_INFO", info);
 };
