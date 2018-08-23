@@ -22,7 +22,7 @@
         :key="index"
         v-for="(m, index) in markers"
         :position="m.position"
-        icon="./sat_icon.png"
+        icon="./sat_icon_m.png"
         @click="center=m.position"
       ></gmap-marker>
     </gmap-map>
