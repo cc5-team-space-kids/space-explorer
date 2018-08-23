@@ -17,11 +17,23 @@ export default {
   },
   data () {
     return {
-      imgUrl: this.$store.state.imgUrl
+      imgUrl: ""
+      // imgUrl: this.$store.state.imgUrl
+      // imgUrl: "https://photojournal.jpl.nasa.gov/jpeg/PIA14417.jpg"
     }
   },
   mounted() {
-    this.$store.dispatch("SET_BACKGROUND_URL")
+    // this.$store.dispatch("SET_BACKGROUND_URL")
+    const RapidAPI = require('rapidapi-connect');
+    const rapid = new RapidAPI(process.env.VUE_APP_RAKUTEN_PKG, process.env.VUE_APP_RAKUTEN_PROJ);
+
+    rapid.call('NasaAPI', 'getPictureOfTheDay', { 
+    }).on('success', (result)=>{
+      this.imgUrl = result.hdurl;
+    }).on('error', (err)=>{
+      console.log(err);
+    });
+
   },
 
   computed: {

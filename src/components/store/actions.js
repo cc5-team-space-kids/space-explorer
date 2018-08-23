@@ -13,7 +13,7 @@ export const SET_BACKGROUND_URL = (store) => {
   //   console.log(err);
   // });
 
-  const url = "https://photojournal.jpl.nasa.gov/jpeg/PIA14417.jpg";
-  store.commit("SET_IMG_URL", url);
+  // const url = "https://photojournal.jpl.nasa.gov/jpeg/PIA14417.jpg";
+  // store.commit("SET_IMG_URL", url);
 
 }
