@@ -1,12 +1,14 @@
 <template>
   <div class="description" :style="{ backgroundImage: `url('${this.$store.state.imgUrl}')` }">
-    <div class="description-block">{{sunInfo}}</div>
-    <div class="description-block intro">{{intro}}</div>
-    <div class="description-block features">
-      <h2>Features</h2>
-      <div class="text" v-for="text in texts" v-bind:key="text.id">
-        <h4>{{text.feature}}</h4>
-        <div>{{text.detail}}</div>
+    <div class="descriptions-container">
+      <div class="description-block">{{sunInfo}}</div>
+      <div class="description-block intro">{{intro}}</div>
+      <div class="description-block features">
+        <h2>Features</h2>
+        <div class="text" v-for="text in texts" v-bind:key="text.id">
+          <h4>{{text.feature}}</h4>
+          <div>{{text.detail}}</div>
+        </div>
       </div>
     </div>
   </div>
@@ -38,9 +40,14 @@
     height: 800px;
   }
 
+  .descriptions-container {
+    background-color: black;
+    opacity: 0.6;
+  }
+
   .description-block {
-    background-color: gray;
     color: white;
+    font-weight: 900;
   }
 
   .intro {
