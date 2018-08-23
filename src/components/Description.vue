@@ -45,12 +45,22 @@ export default {
 </script>
 
 <style scoped>
-.description {
-  padding: 10px;
-  background-color: white;
-  text-align: left;
-  margin-top: 100px;
-}
+  .description {
+    padding: 35px 5px;
+    background-color: white;
+    text-align: left;
+    height: 800px;
+  }
+
+  .descriptions-container {
+    background-color: black;
+    opacity: 0.6;
+  }
+
+  .description-block {
+    color: white;
+    font-weight: 900;
+  }
 
 .intro {
   margin-top: 10px;

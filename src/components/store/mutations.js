@@ -12,7 +12,9 @@ export const SET_SATELLITES = (state, satellites) => {
     return {
       lat: satellite.satlat,
       lng: satellite.satlng,
+      al: satellite.satalt,
       name: satellite.satname,
+      launchDate: satellite.launchDate,
     };
   })
   .forEach((satellite) => {

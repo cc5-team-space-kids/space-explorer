@@ -13,13 +13,13 @@ export const SET_BACKGROUND_URL = (store) => {
   const RapidAPI = require('rapidapi-connect');
   const rapid = new RapidAPI(process.env.VUE_APP_RAKUTEN_PKG, process.env.VUE_APP_RAKUTEN_PROJ);
 
-  rapid.call('NasaAPI', 'getPictureOfTheDay', {
-    'apiKey': process.env.VUE_APP_NAK
-  }).on('success', (result) => {
-    store.commit("SET_IMG_URL", result.url);
-  }).on('error', (err) => {
-    console.log(err);
-  });
+  rapid.call('NasaAPI', 'getPictureOfTheDay', { 
+    'apiKey': process.env.VUE_APP_NAK    
+    }).on('success', (result)=>{
+      store.commit("SET_IMG_URL", result.hdurl);
+    }).on('error', (err)=>{
+      console.log(err);
+    });
 }
 
 export const SET_SATELLITES = async (store, loc) => {
@@ -37,7 +37,7 @@ export const SET_SUN_INFO = async (store, loc) => {
   const d = new Date();
   const lat = loc.lat;
   const lng = loc.lng;
-  const date = d.getUTCFullYear() + "-" + (d.getUTCMonth() + 1) + "-" + d.getUTCDay();
+  const date = d.getUTCFullYear() + "-" + (d.getUTCMonth() + 1) + "-" + d.getDate();
 
   const url = `https://sun.p.mashape.com/api/sun/?latitude=${lat}&longitude=${lng}&date=${date}`;
 

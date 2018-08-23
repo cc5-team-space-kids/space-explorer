@@ -1,5 +1,6 @@
 <template>
-  <div id="app" :style="{ backgroundImage: `url('${this.$store.state.imgUrl}')` }">
+  <div id="app">
+    <h3 class="title">Space Explorer</h3>
     <GoogleMap></GoogleMap>
     <Description />
   </div>
@@ -24,11 +25,17 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  #app {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+
+  .title {
+    background-color: navy;
+    opacity: 0.6;
+    color: ivory;
+  }
 </style>
