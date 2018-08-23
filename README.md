@@ -19,10 +19,6 @@ Background - The background image changes everyday, complimentary of NASA
 
 ---
 
-## Technical stuff
----
-
-[(Back to top)](#space-explorer)
 
 
 ## Usage
@@ -39,19 +35,18 @@ yarn start // start web server
 [(Back to top)](#space-explorer)
 
 ---
-## Team
-Tsubasa Kondo -   
-Tsuyoshi Akiyama -   
-Kimiko Motoyama -   
-Hiroyuki Momoi -   
+
+## Technical stuff
+---
+rakuten rapid api  
+Vue / Vuex  
+vue2-google-maps
+
+[(Back to top)](#space-explorer)
 
 ---
-
-
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-https://www.linkedin.com/company/peeringdb'><img src='img/linkedin.png'></a> 
-
-![Tsubasa Kondo](https://www.linkedin.com/company/peeringdb)
-
-![Alt Text](http://www.sheawong.com/wp-content/uploads/2013/08/keephatin.gif)
+## Team
+- [@TsubasaK111](https://github.com/TsubasaK111) [![LikedIn](./img/In-2C-21px-r.png)](https://www.linkedin.com/in/tsubasakondo/)
+- [@Akitsuyoshi](https://github.com/Akitsuyoshi) [![LikedIn](./img/In-2C-21px-r.png)](https://www.linkedin.com/in/tsuyoshi-akiyama-ab632a90)
+- [@kimikomotoyama](https://github.com/kimikomotoyama) [![LikedIn](./img/In-2C-21px-r.png)](https://www.linkedin.com/in/kimiko-motoyama-54a198132)
+- [@m0m0i](https://github.com/m0m0i) [![LikedIn](./img/In-2C-21px-r.png)](https://www.linkedin.com/in/hiroyuki-momoi-52270428)
