@@ -19,8 +19,6 @@ Background - The background image changes everyday, complimentary of NASA
 
 ---
 
-
-
 ## Usage
 ---
 you can run `yarn start` to start the application. You will then be able to access it at localhost:8080
