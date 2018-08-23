@@ -1,5 +1,6 @@
 <template>
   <div class="description">
+    <div>{{this.$store.state.center}}</div>
     <div>{{sunInfo}}</div>
     <div>{{moonInfo}}</div>
     <div class="intro">{{intro}}</div>
