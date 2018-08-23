@@ -2,7 +2,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
 ## Find Satellite
-This application is for all SPACE-GUYS(and for kids, ali3ns). You can see where satellites are now. There are numerous numbers of satllites orbiting the earth. For TVs, weather, GPS, security, and more.This app shows the positions of the satellites in real-time on a map!
+This application is for all SPACE-GUYS(and for kids, ali3ns). You can see where the satellites are now. There are numerous numbers of satllites orbiting the earth. For TVs, weather, GPS, security, and more. This app shows the positions of the satellites in real-time on a map!
 
 Let's play around!!
 
@@ -34,11 +34,11 @@ yarn start // start web server
 
 ---
 
-## Technical stuff
+## Technology used
 
-rakuten rapid api  
-Vue / Vuex  
-vue2-google-maps
+- rakuten rapid api
+- Vue / Vuex  
+- vue2-google-maps
 
 [(Back to top)](#space-explorer)
 
