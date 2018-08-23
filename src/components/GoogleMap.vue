@@ -23,7 +23,7 @@
         v-for="(m, index) in markers"
         :position="m.position"
         icon="./sat_icon_m.png"
-        @click="$store.commit('SET_CENTER', m.position)"
+        @click="$store.dispatch('SET_CENTER', m.position)"
       ></gmap-marker>
     </gmap-map>
   </div>
