@@ -28,9 +28,6 @@ export const SET_SATELLITES = async (store, loc) => {
     .then((data) => {
       return data.json();
     })
-    .then((json) => {
-      return json;
-    })
     .catch((e) => console.log(e));
 
   store.commit("SET_SATELLITES", satellites);
