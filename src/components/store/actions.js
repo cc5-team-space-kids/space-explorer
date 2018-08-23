@@ -1,10 +1,3 @@
-import {
-  resolve
-} from 'path';
-import {
-  rejects
-} from 'assert';
-
 export const ADD_MESSAGE = (store, message) => {
   store.commit("SET_MESSAGE", message)
 }
@@ -41,7 +34,7 @@ export const SET_SUN_INFO = async (store, loc) => {
   const d = new Date();
   const lat = loc.lat;
   const lng = loc.lng;
-  const date = d.getUTCFullYear() + "-" + (d.getUTCMonth() + 1) + "-" + d.getUTCDay();
+  const date = d.getUTCFullYear() + "-" + (d.getUTCMonth() + 1) + "-" + d.getDate();
 
   const url = `https://sun.p.mashape.com/api/sun/?latitude=${lat}&longitude=${lng}&date=${date}`;
 
