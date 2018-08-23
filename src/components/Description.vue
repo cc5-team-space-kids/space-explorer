@@ -2,6 +2,7 @@
   <div>
     Description
     <div>{{sunInfo}}</div>
+    <div>{{moonInfo}}</div>
   </div>
 </template>
 
@@ -11,6 +12,7 @@
     data() {
       return {
         sunInfo: this.$store.state.sunInfo,
+        moonInfo: this.$store.state.moonInfo,
       };
   },
   }

@@ -51,6 +51,7 @@ export default {
 
   async mounted() {
     const location = await this.geolocate();
+    this.getMoonInfo();
   },
 
   
@@ -67,6 +68,9 @@ export default {
     getSunInfo() {
       const loc = this.center;
       this.$store.dispatch("SET_SUN_INFO", loc);
+    },
+    getMoonInfo() {
+      this.$store.dispatch("SET_MOON_INFO");
     },
     addMarker() {
       if (this.currentPlace) {
