@@ -19,11 +19,13 @@ export const SET_SATELLITES = (state, satellites) => {
   })
   .forEach((satellite) => {
     state.markers.push({ position: satellite });
+    console.log(state.markers)
   });
 };
 
 export const SET_SUN_INFO = (state, sunInfo) => {
-  state.sunInfo.push(sunInfo);
+  console.log(JSON.parse(sunInfo))
+  state.sunInfo = JSON.parse(sunInfo);
 };
 
 export const SET_MOON_INFO = (state, moonInfo) => {
