@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :style="{ backgroundImage: `url('${imgUrl}')` }">
+  <div id="app" :style="{ backgroundImage: `url('${this.$store.state.imgUrl}')` }">
     <Map msg="Welcome to Space Explorer"/>
     <Description />
   </div>
@@ -15,21 +15,11 @@ export default {
     Map,
     Description
   },
-  data () {
-    return {
-      imgUrl: this.$store.state.imgUrl
-    }
-  },
+
   mounted() {
-    this.$store.dispatch("SET_BACKGROUND_URL")
+    this.$store.dispatch("SET_BACKGROUND_URL");
   },
 
-  computed: {
-    getimgUrl: function() {
-      console.log("Hi I'm computed")
-      return this.$store.dispatch("SET_BACKGROUND_URL")
-    }
-  },
 }
 </script>
 

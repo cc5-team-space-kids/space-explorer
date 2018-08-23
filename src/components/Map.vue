@@ -11,14 +11,14 @@
         :zoom="16"
         map-type-id="terrain"
       >
-        <GmapMarker
+        <!-- <GmapMarker
           :key="index"
           v-for="(m, index) in markers"
           :position="m.position"
           :clickable="true"
           :draggable="true"
           @click="center=m.position"
-        />
+        /> -->
       </GmapMap>
     </div>
 </template>
