@@ -2,7 +2,10 @@
   <div class="description" :style="{ backgroundImage: `url('${this.$store.state.imgUrl}')` }">
     <div class="descriptions-container">
       <div class="intro">
-        <h1>Space Explorer</h1>
+        <img src="../../img/saturn-clipart-5.png" />
+        <span class="title">
+          Space Explorer
+        </span>
         <p>{{this.$store.state.intro}}</p>
         </div>
      
@@ -18,8 +21,8 @@
               <div>
                 <h2>Satellite Information</h2>
                   <div>
-                    Current Satellites is: {{this.$store.state.center.name}}<br/>
-                    Latitude: {{this.$store.state.center.lat}} Longitude: {{this.$store.state.center.lng}}<br/>
+                    Current Satellites is: <br/>{{this.$store.state.center.name}}<br/>
+                    Latitude: <br/>{{this.$store.state.center.lat}}<br/> Longitude: <br/>{{this.$store.state.center.lng}}<br/>
                   </div>
               </div>
             </v-card-title>
@@ -87,6 +90,15 @@ export default {
 
 <style scoped>
   @import url('https://fonts.googleapis.com/css?family=Nunito');
+  .title {
+    font-size: 30px !important;
+  }
+
+  .intro img {
+    width: 20%;
+  }
+  
+
   .description {
     font-family: 'Nunito', sans-serif;
     padding: 35px 5px;
@@ -96,8 +108,9 @@ export default {
   }
 
   .descriptions-container {
-    opacity: 0.6;
-    background-color: black;
+    padding: 10px;
+    /* opacity: 0.6; */
+    /* background-color: black; */
     color: white;
     font-weight: 800;
   }
