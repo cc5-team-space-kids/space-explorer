@@ -51,7 +51,7 @@ export default {
     padding: 35px 5px;
     background-color: white;
     text-align: left;
-    height: 800px;
+    height: 1000px;
   }
 
   .descriptions-container {

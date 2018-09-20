@@ -4,7 +4,7 @@
       :center="center"
       :zoom="5"
       map-type-id="satellite"
-      style="width:100%;  height: 600px;"
+      style="width:100%; height:1000px"
     >
       <gmap-marker
         :key="index"
