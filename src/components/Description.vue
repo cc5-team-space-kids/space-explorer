@@ -82,50 +82,50 @@ export default {
   name: "Description",
   methods: {
     time: function(dateTime) {
-      return moment(dateTime).format('LT');
-    }
-  }
+      return moment(dateTime).format("LT");
+    },
+  },
 };
 </script>
 
 <style scoped>
-  @import url('https://fonts.googleapis.com/css?family=Nunito');
-  .title {
-    font-size: 30px !important;
-  }
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+.title {
+  font-size: 30px !important;
+}
 
-  .descriptionText {
-    margin: 5%;
-  }
+.descriptionText {
+  margin: 5%;
+}
 
-  .intro img {
-    width: 20%;
-  }
-  
-  .saturn {
-    width: 20%;
-  }
+.intro img {
+  width: 20%;
+}
 
-  .description {
-    font-family: 'Nunito', sans-serif;
-    padding: 35px 5px;
-    background-color: white;
-    text-align: left;
-    height: 1000px;
-  }
+.saturn {
+  width: 20%;
+}
 
-  .descriptions-container {
-    padding: 10px;
-    /* opacity: 0.6; */
-    /* background-color: black; */
-    color: white;
-    font-weight: 800;
-  }
+.description {
+  font-family: "Nunito", sans-serif;
+  padding: 35px 5px;
+  background-color: white;
+  text-align: left;
+  height: 1100px;
+}
 
-  .description-block {
-    color: white;
-    font-weight: 900;
-  }
+.descriptions-container {
+  padding: 10px;
+  /* opacity: 0.6; */
+  /* background-color: black; */
+  color: white;
+  font-weight: 800;
+}
+
+.description-block {
+  color: white;
+  font-weight: 900;
+}
 
 .intro {
   margin-top: 10px;
