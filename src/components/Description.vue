@@ -3,20 +3,19 @@
     <div class="descriptions-container">
       <div class="intro">
         <img src="../../img/saturn-clipart-5.png" />
-        <span class="title">
-          Space Explorer
-        </span>
-        <p>{{this.$store.state.intro}}</p>
+        <span class="title">  Space Explorer</span>
+        <p class="descriptionText">{{this.$store.state.intro}}</p>
         </div>
      
-      <v-card>
+      <v-card color="transparent">
       <v-container
         fluid
         grid-list-lg
+        
       >
         <v-layout row wrap>
-          <v-flex xs12>
-            <v-card color="blue-grey darken-2" class="white--text">
+          <v-flex>
+            <v-card color="black darken-2" class="white--text">
                <v-card-title primary-title>
               <div>
                 <h2>Satellite Information</h2>
@@ -29,8 +28,8 @@
              
             </v-card>
           </v-flex>
-          <v-flex xs12>
-            <v-card color="blue-grey darken-2" class="white--text">
+          <v-flex>
+            <v-card color="black darken-2" class="white--text">
                <v-card-title primary-title>
               <div>
                   <h2>Sun Information</h2>
@@ -44,8 +43,8 @@
              
             </v-card>
           </v-flex>
-          <v-flex xs12>
-            <v-card color="blue-grey darken-2" class="white--text">
+          <v-flex>
+            <v-card color="black darken-2" class="white--text">
                <v-card-title primary-title>
               <div>
                 <h2>Moon Information</h2>
@@ -66,7 +65,8 @@
       </v-container>
     </v-card>
     <div class="features">
-        <h2>Features</h2>
+        <img src="../../img/saturn-clipart-5.png" class="saturn"/>
+        <span class="title">  Features</span>
         <div class="text" v-for="text in this.$store.state.texts" v-bind:key="text.id">
           <div>{{text.feature}}: {{text.detail}}</div>
         </div>
@@ -94,10 +94,17 @@ export default {
     font-size: 30px !important;
   }
 
+  .descriptionText {
+    margin: 5%;
+  }
+
   .intro img {
     width: 20%;
   }
   
+  .saturn {
+    width: 20%;
+  }
 
   .description {
     font-family: 'Nunito', sans-serif;
