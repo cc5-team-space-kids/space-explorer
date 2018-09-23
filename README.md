@@ -48,4 +48,4 @@ yarn start // start web server
 - [@TsubasaK111](https://github.com/TsubasaK111) [![LikedIn](https://github.com/cc5-team-space-kids/space-explorer/blob/readme/img/In-2C-21px-R.png?raw=true)](https://www.linkedin.com/in/tsubasakondo/)
 - [@Akitsuyoshi](https://github.com/Akitsuyoshi) [![LikedIn](https://github.com/cc5-team-space-kids/space-explorer/blob/readme/img/In-2C-21px-R.png?raw=true)](https://www.linkedin.com/in/tsuyoshi-akiyama-ab632a90)
 - [@kimikomotoyama](https://github.com/kimikomotoyama) [![LikedIn](https://github.com/cc5-team-space-kids/space-explorer/blob/readme/img/In-2C-21px-R.png?raw=true)](https://www.linkedin.com/in/kimiko-motoyama-54a198132)
-- [@m0m0i](https://github.com/m0m0i) [![LikedIn](https://github.com/cc5-team-space-kids/space-explorer/blob/readme/img/In-2C-21px-R.png?raw=true)](https://www.linkedin.com/in/hiroyuki-momoi-52270428)
+- [@m0m0i](https://github.com/m0m0i) [![LikedIn](https://github.com/cc5-team-space-kids/space-explorer/blob/readme/img/In-2C-21px-R.png?raw=true)](https://www.linkedin.com/in/hiroyuki-momoi)
