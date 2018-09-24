@@ -3,8 +3,8 @@
     <div class="descriptions-container">
       <div class="intro">
         <img src="../../img/saturn-clipart-5.png" />
-        <span class="title">  Space Explorer</span>
-        <p class="descriptionText">{{this.$store.state.intro}}</p>
+        <span class="title text">  Space Explorer</span>
+        <p class="descriptionText text">{{this.$store.state.intro}}</p>
         </div>
      
       <v-card color="transparent">
@@ -20,7 +20,7 @@
               <div>
                 <h2>Satellite Information</h2>
                   <div>
-                    Current Satellites is: <br/>{{this.$store.state.center.name}}<br/>
+                    Current Satellite is: <br/>{{this.$store.state.center.name}}<br/>
                     Latitude: <br/>{{this.$store.state.center.lat}}<br/> Longitude: <br/>{{this.$store.state.center.lng}}<br/>
                   </div>
               </div>
@@ -48,8 +48,8 @@
                <v-card-title primary-title>
               <div>
                 <h2>Moon Information</h2>
-                age: {{this.$store.state.moonInfo[0].age}}<br/>
-                illumination: {{this.$store.state.moonInfo[0].illumination}}<br/>
+                age: {{this.$store.state.moonInfo[0].age.toFixed(1)}} days<br/>
+                illumination: {{this.$store.state.moonInfo[0].illumination.toFixed(1)}}%<br/>
                 stage: {{this.$store.state.moonInfo[0].stage}}<br/>
                 DFCOE: {{this.$store.state.moonInfo[0].DFCOE}}<br/>
                 DFS: {{this.$store.state.moonInfo[0].DFS}}<br/>
@@ -64,9 +64,9 @@
         </v-layout>
       </v-container>
     </v-card>
-    <div class="features">
+    <div class="features text">
         <img src="../../img/saturn-clipart-5.png" class="saturn"/>
-        <span class="title">  Features</span>
+        <span class="title text">  Features</span>
         <div class="text" v-for="text in this.$store.state.texts" v-bind:key="text.id">
           <div>{{text.feature}}: {{text.detail}}</div>
         </div>
@@ -133,5 +133,10 @@ export default {
 
 .features {
   margin-top: 25px;
+}
+
+.text {
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 </style>
