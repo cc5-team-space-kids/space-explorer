@@ -4,7 +4,7 @@
       :center="center"
       :zoom="5"
       map-type-id="satellite"
-      style="width:100%;  height: 600px;"
+      style="width:100%; height:1100px"
     >
       <gmap-marker
         :key="index"
@@ -30,20 +30,18 @@ export default {
   },
 
   watch: {
-    center: function (val, oldVal) {
+    center: function(val, oldVal) {
       if (val !== oldVal) {
         this.getSatellites();
         this.getSunInfo();
       }
-    }
+    },
   },
 
   async mounted() {
     const location = await this.geolocate();
     this.getMoonInfo();
   },
-
-  
 
   methods: {
     // receives a place object via the autocomplete component
@@ -65,7 +63,7 @@ export default {
       if (this.currentPlace) {
         const marker = {
           lat: this.currentPlace.geometry.location.lat(),
-          lng: this.currentPlace.geometry.location.lng()
+          lng: this.currentPlace.geometry.location.lng(),
         };
         this.markers.push({ position: marker });
         this.places.push(this.currentPlace);
@@ -74,13 +72,13 @@ export default {
       }
     },
     geolocate: function() {
-      navigator.geolocation.getCurrentPosition(position => {
+      navigator.geolocation.getCurrentPosition((position) => {
         this.center = {
           lat: position.coords.latitude,
-          lng: position.coords.longitude
+          lng: position.coords.longitude,
         };
       });
-    }
-  }
+    },
+  },
 };
 </script>

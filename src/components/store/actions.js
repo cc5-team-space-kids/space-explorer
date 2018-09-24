@@ -16,7 +16,13 @@ export const SET_BACKGROUND_URL = (store) => {
   rapid.call('NasaAPI', 'getPictureOfTheDay', { 
     'apiKey': process.env.VUE_APP_NAK    
     }).on('success', (result)=>{
-      store.commit("SET_IMG_URL", result.hdurl);
+      let url = "";
+      if (!result) {
+        url = "https://apod.nasa.gov/apod/image/1809/NGC6727-drudis.jpg";
+      } else {
+        url = result.hdurl;
+      }
+      store.commit("SET_IMG_URL", url);
     }).on('error', (err)=>{
       console.log(err);
     });
