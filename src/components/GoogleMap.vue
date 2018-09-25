@@ -33,7 +33,6 @@ export default {
     center: function(val, oldVal) {
       if (val !== oldVal) {
         this.getSatellites();
-        this.getSunInfo();
       }
     },
   },
@@ -51,10 +50,6 @@ export default {
     getSatellites() {
       const loc = this.center;
       this.$store.dispatch("SET_SATELLITES", loc);
-    },
-    getSunInfo() {
-      const loc = this.center;
-      this.$store.dispatch("SET_SUN_INFO", loc);
     },
     getMoonInfo() {
       this.$store.dispatch("SET_MOON_INFO");
