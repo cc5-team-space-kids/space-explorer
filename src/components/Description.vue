@@ -31,7 +31,7 @@
           <v-flex>
             <v-card color="black darken-2" class="white--text">
                <v-card-title primary-title>
-              <div>
+              <div v-if="this.$store.state.sunInfo.length > 0">
                   <h2>Sun Information</h2>
                   dawn: {{time(this.$store.state.sunInfo[0].dawn)}}<br/>
                   sunset: {{time(this.$store.state.sunInfo[1].sunset)}}<br/>
@@ -43,7 +43,7 @@
              
             </v-card>
           </v-flex>
-          <v-flex>
+          <v-flex v-if="this.$store.state.moonInfo.length > 0">
             <v-card color="black darken-2" class="white--text">
                <v-card-title primary-title>
               <div>
@@ -55,6 +55,21 @@
                 DFS: {{this.$store.state.moonInfo[0].DFS}}<br/>
                 FM- UT: {{time(this.$store.state.moonInfo[0].FM.UT)}} DT: {{time(this.$store.state.moonInfo[0].FM.DT)}}<br/>
                 NNM- UT:{{time(this.$store.state.moonInfo[0].NNM.UT)}}  DT:{{time(this.$store.state.moonInfo[0].NNM.DT)}}
+              </div>
+            </v-card-title>
+             
+            </v-card>
+          </v-flex>
+          <v-flex v-else>
+            <v-card color="black darken-2" class="white--text">
+               <v-card-title primary-title>
+              <div>
+                <h2>Moon Information</h2>
+                  age: 13.6 days<br/>
+                  illumination: 97.3%<br/>
+                  stage: waxing<br/>
+                  DFCOE: DKEAAL 4345<br/>
+                  DFS: DKSK<br/>
               </div>
             </v-card-title>
              
