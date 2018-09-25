@@ -1,9 +1,4 @@
 <template>
-  <!-- <div id="app">
-    <h3 class="title">Space Explorer</h3>
-    <GoogleMap></GoogleMap>
-    <Description />
-  </div> -->
   <div class="main-container">
     <v-container
       fill-height
@@ -14,7 +9,6 @@
       >
         <v-slide-x-transition>
           <v-flex
-            v-if="!hideLeft"
             class="left-aside-wrapper"
           >
             <Description />
@@ -39,28 +33,32 @@ export default {
     GoogleMap
   },
 
+  data() {
+    return {
+      center: this.$store.state.center
+    }
+  },
+
+  beforeMount() {
+    this.getSunInfo();
+
+  },
+
   mounted() {
     this.$store.dispatch("SET_BACKGROUND_URL");
   },
 
+  methods: {
+    getSunInfo() {
+      const loc = this.center;
+      this.$store.dispatch("SET_SUN_INFO", loc);
+    },
+  },
 }
 </script>
 
 
 <style lang="less">
-  /* #app {
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-  }
-
-  .title {
-    background-color: navy;
-    opacity: 0.6;
-    color: ivory;
-  } */
   .main-container {
     position: relative;
     height: 100vh;
