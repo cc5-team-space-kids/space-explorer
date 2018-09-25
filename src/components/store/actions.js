@@ -1,6 +1,3 @@
-import { resolve } from 'path';
-import { rejects } from 'assert';
-
 export const ADD_MESSAGE = (store, message) => {
   store.commit("SET_MESSAGE", message)
 }
@@ -51,16 +48,19 @@ export const SET_SUN_INFO = async (store, loc) => {
 
   const info = await new Promise((resolve) => {
     unirest.get(url)
-      .header("X-Mashape-Key", "OHJHR7IfeCmshao1sHNDuj8PtDi1p1fNjd1jsnXbs3LPozz5rN")
-      .header("X-Mashape-Host", "sun.p.mashape.com")
-      .end((res) => {
-        if (res) {
-          resolve(res.body);
-        }
-      });
+    .header("X-Mashape-Key", "OHJHR7IfeCmshao1sHNDuj8PtDi1p1fNjd1jsnXbs3LPozz5rN")
+    .header("X-Mashape-Host", "sun.p.mashape.com")
+    .end((res) => {
+      if (res) {
+        resolve(res.body);
+      }
+    });
   })
 
-  store.commit("SET_SUN_INFO", info);
+  if (info !== undefined){
+    store.commit("SET_SUN_INFO", info);
+  }
+  console.log("Sun info API doesn't work.")
 };
 
 export const SET_MOON_INFO = async (store) => {
@@ -76,6 +76,8 @@ export const SET_MOON_INFO = async (store) => {
         }
       });
   })
-
-  store.commit("SET_MOON_INFO", info);
+  if (info !== undefined){
+    store.commit("SET_MOON_INFO", info);
+  }
+  console.log("Moon info API doesn't work.")
 };
