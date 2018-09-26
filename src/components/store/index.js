@@ -23,13 +23,13 @@ const store = new Vuex.Store({
     intro:
         "This app is for space nerds who is intrigued with the outer space." +
         "There are numerous numbers of satllites orbiting the earth. For TVs, weather, GPS, security, and more." +
-        "This app shows the positions of the satellites in real-time on a map!",
+        "This app shows the positions of the satellites on a map!",
     texts: [
       {
         id: 1,
         feature: "Map",
         detail:
-          "The markers indicate the satellites above the earth plain in real-time"
+          "The markers indicate the satellites above the earth plain"
       },
       {
         id: 2,
