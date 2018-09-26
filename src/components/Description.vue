@@ -86,8 +86,10 @@
     <div class="features text">
         <img src="../../img/saturn-clipart-5.png" class="saturn"/>
         <span class="title text">  Features</span>
-        <div class="text" v-for="text in this.$store.state.texts" v-bind:key="text.id">
-          <div>{{text.feature}}: {{text.detail}}</div>
+        <div class="margin-top">
+          <div class="text" v-for="text in this.$store.state.texts" v-bind:key="text.id">
+            <div>{{text.feature}}: {{text.detail}}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -102,8 +104,8 @@ export default {
   methods: {
     time: function(dateTime) {
       return moment(dateTime).format("LT");
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -121,7 +123,9 @@ export default {
   width: 20%;
 }
 
-a { color: inherit; }
+a {
+  color: inherit;
+}
 
 .saturn {
   width: 20%;
@@ -159,5 +163,9 @@ a { color: inherit; }
 .text {
   color: #fff;
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.margin-top {
+  margin-top: 5%;
 }
 </style>
