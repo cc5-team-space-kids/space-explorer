@@ -38,9 +38,9 @@
               <div v-if="this.$store.state.sunInfo.length > 0">
                   <h2>Sun Information</h2>
                   dawn: {{time(this.$store.state.sunInfo[0].dawn)}}<br/>
-                  sunset: {{time(this.$store.state.sunInfo[1].sunset)}}<br/>
-                  noon: {{time(this.$store.state.sunInfo[2].noon)}}<br/>
                   sunrise: {{time(this.$store.state.sunInfo[3].sunrise)}}<br/>
+                  noon: {{time(this.$store.state.sunInfo[2].noon)}}<br/>
+                  sunset: {{time(this.$store.state.sunInfo[1].sunset)}}<br/>
                   dusk: {{time(this.$store.state.sunInfo[4].dusk)}}
               </div>
             </v-card-title>
@@ -69,11 +69,9 @@
                <v-card-title primary-title>
               <div>
                 <h2>Moon Information</h2>
-                  age: 13.6 days<br/>
-                  illumination: 97.3%<br/>
-                  stage: waxing<br/>
-                  DFCOE: DKEAAL 4345<br/>
-                  DFS: DKSK<br/>
+                  age: 17.08 days<br/>
+                  illumination: 95%<br/>
+                  stage: Waning gibbous<br/>
               </div>
             </v-card-title>
              
