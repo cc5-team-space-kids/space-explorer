@@ -20,7 +20,12 @@
               <div>
                 <h2>Satellite Information</h2>
                   <div>
-                    Current Satellite is: <br/>{{this.$store.state.center.name}}<br/>
+                    <div v-if="this.$store.state.center.name !== '<Please select satellite>'">
+                      Current Satellite is: <br/><a :href="'https://en.wikipedia.org/wiki/' + this.$store.state.center.name" target="_blank">{{this.$store.state.center.name}}</a><br/>
+                    </div>
+                    <div v-else>
+                      Current Satellite is: <br/>{{this.$store.state.center.name}}<br/>
+                    </div>
                     Latitude: <br/>{{this.$store.state.center.lat}}<br/> Longitude: <br/>{{this.$store.state.center.lng}}<br/>
                   </div>
               </div>
@@ -116,6 +121,8 @@ export default {
 .intro img {
   width: 20%;
 }
+
+a { color: inherit; }
 
 .saturn {
   width: 20%;
