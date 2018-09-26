@@ -19,9 +19,13 @@
                <v-card-title primary-title>
               <div>
                 <h2>Satellite Information</h2>
-                  <div>
+                  <div v-if="this.$store.state.center.name !== '<Please select satellite>'">
                     Current Satellite is: <br/>{{this.$store.state.center.name}}<br/>
                     Latitude: <br/>{{this.$store.state.center.lat}}<br/> Longitude: <br/>{{this.$store.state.center.lng}}<br/>
+                  </div>
+                  <div v-else>
+                    Current Satellite is: <br/>{{this.$store.state.center.name}}<br/>
+                    Latitude: <br/>-<br/> Longitude: <br/>-<br/>
                   </div>
               </div>
             </v-card-title>
