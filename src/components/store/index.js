@@ -13,7 +13,7 @@ const store = new Vuex.Store({
     imgUrl: "",
     // It set default city to seatle
     message: "Hi Kimiko!! You get used to VUEX!! yay!!",
-    
+
     center: { lat: 35.6605, lng: 139.7292, name: "<Please select satellite>" },
     markers: [],
     places: [],
@@ -21,22 +21,21 @@ const store = new Vuex.Store({
     sunInfo: [],
     moonInfo: [],
     intro:
-        "This app is for space nerds who is intrigued with the outer space." +
-        "There are numerous numbers of satllites orbiting the earth. For TVs, weather, GPS, security, and more." +
-        "This app shows the positions of the satellites on a map!",
+      "This app is for space nerds who are intrigued with the outer space. " +
+      "There are numerous numbers of satllites orbiting the earth. For TVs, weather, GPS, security, and more. " +
+      "This app shows the positions of the satellites on a map!",
     texts: [
       {
         id: 1,
         feature: "Map",
-        detail:
-          "The markers indicate the satellites above the earth plain"
+        detail: "The markers indicate the satellites above the earth plain"
       },
       {
         id: 2,
         feature: "Background",
         detail: "The background image changes everyday, complimentary of NASA"
       }
-    ],
+    ]
   }
 });
 
