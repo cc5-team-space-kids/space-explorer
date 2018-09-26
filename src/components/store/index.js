@@ -14,7 +14,7 @@ const store = new Vuex.Store({
     // It set default city to seatle
     message: "Hi Kimiko!! You get used to VUEX!! yay!!",
     
-    center: { lat: 47.608, lng: -122.335, name: "<Please select satellite>" },
+    center: { lat: 35.6605, lng: 139.7292, name: "<Please select satellite>" },
     markers: [],
     places: [],
     currentPlace: null,
