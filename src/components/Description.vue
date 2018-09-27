@@ -21,7 +21,8 @@
                 <h2>Satellite Information</h2>
                   <div>
                     <div v-if="this.$store.state.center.name !== '<Please select satellite>'">
-                      Current Satellite is: <br/><a :href="'https://en.wikipedia.org/wiki/' + this.$store.state.center.name" target="_blank">{{this.$store.state.center.name}}</a><br/>
+                      <!-- https://www.google.com/search?safe=off&source=hp&ei=lF-sW42OKJGnoASJmZTABQ&q=satellite&oq=satellite&gs_l=psy-ab.3..35i39k1l2j0i67k1l6j0i203k1j0i67k1.2459.4054.0.4253.11.10.0.0.0.0.161.879.4j4.9.0....0...1c.1.64.psy-ab..2.9.955.6...78.jHcE3ClRmhQ -->
+                      Current Satellite is: <br/><a :href="'https://www.google.com/search?safe=off&source=hp&ei=lF-sW42OKJGnoASJmZTABQ&q=' + this.$store.state.center.name + '&oq=' + this.$store.state.center.name" target="_blank">{{this.$store.state.center.name}}</a><br/>
                     </div>
                     <div v-else>
                       Current Satellite is: <br/>{{this.$store.state.center.name}}<br/>
