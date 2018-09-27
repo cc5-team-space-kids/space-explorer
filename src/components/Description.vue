@@ -21,13 +21,13 @@
                 <h2>Satellite Information</h2>
                   <div>
                     <div v-if="this.$store.state.center.name !== '<Please select satellite>'">
-                      <!-- https://www.google.com/search?safe=off&source=hp&ei=lF-sW42OKJGnoASJmZTABQ&q=satellite&oq=satellite&gs_l=psy-ab.3..35i39k1l2j0i67k1l6j0i203k1j0i67k1.2459.4054.0.4253.11.10.0.0.0.0.161.879.4j4.9.0....0...1c.1.64.psy-ab..2.9.955.6...78.jHcE3ClRmhQ -->
                       Current Satellite is: <br/><a :href="'https://www.google.com/search?safe=off&source=hp&ei=lF-sW42OKJGnoASJmZTABQ&q=' + this.$store.state.center.name + '&oq=' + this.$store.state.center.name" target="_blank">{{this.$store.state.center.name}}</a><br/>
+                      Latitude: <br/>{{this.$store.state.center.lat}}<br/> Longitude: <br/>{{this.$store.state.center.lng}}<br/>
                     </div>
                     <div v-else>
                       Current Satellite is: <br/>{{this.$store.state.center.name}}<br/>
+                      Latitude: <br/>-<br/> Longitude: <br/>-<br/>
                     </div>
-                    Latitude: <br/>{{this.$store.state.center.lat}}<br/> Longitude: <br/>{{this.$store.state.center.lng}}<br/>
                   </div>
               </div>
             </v-card-title>
@@ -40,9 +40,9 @@
               <div v-if="this.$store.state.sunInfo.length > 0">
                   <h2>Sun Information</h2>
                   dawn: {{time(this.$store.state.sunInfo[0].dawn)}}<br/>
-                  sunset: {{time(this.$store.state.sunInfo[1].sunset)}}<br/>
-                  noon: {{time(this.$store.state.sunInfo[2].noon)}}<br/>
                   sunrise: {{time(this.$store.state.sunInfo[3].sunrise)}}<br/>
+                  noon: {{time(this.$store.state.sunInfo[2].noon)}}<br/>
+                  sunset: {{time(this.$store.state.sunInfo[1].sunset)}}<br/>
                   dusk: {{time(this.$store.state.sunInfo[4].dusk)}}
               </div>
             </v-card-title>
@@ -71,11 +71,9 @@
                <v-card-title primary-title>
               <div>
                 <h2>Moon Information</h2>
-                  age: 13.6 days<br/>
-                  illumination: 97.3%<br/>
-                  stage: waxing<br/>
-                  DFCOE: DKEAAL 4345<br/>
-                  DFS: DKSK<br/>
+                  age: 17.08 days<br/>
+                  illumination: 95%<br/>
+                  stage: Waning gibbous<br/>
               </div>
             </v-card-title>
              
@@ -88,8 +86,10 @@
     <div class="features text">
         <img src="../../img/saturn-clipart-5.png" class="saturn"/>
         <span class="title text">  Features</span>
-        <div class="text" v-for="text in this.$store.state.texts" v-bind:key="text.id">
-          <div>{{text.feature}}: {{text.detail}}</div>
+        <div class="margin-top">
+          <div class="text" v-for="text in this.$store.state.texts" v-bind:key="text.id">
+            <div>{{text.feature}}: {{text.detail}}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -104,8 +104,8 @@ export default {
   methods: {
     time: function(dateTime) {
       return moment(dateTime).format("LT");
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -123,7 +123,9 @@ export default {
   width: 20%;
 }
 
-a { color: inherit; }
+a {
+  color: inherit;
+}
 
 .saturn {
   width: 20%;
@@ -161,5 +163,9 @@ a { color: inherit; }
 .text {
   color: #fff;
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.margin-top {
+  margin-top: 5%;
 }
 </style>
